@@ -1,0 +1,41 @@
+---
+title: About
+description: We have an extremely talented group of musicians whose sole purpose is to inspire you with music.
+image: /images/celtic-room-freak-group-outside-2-2000w.webp
+mob_image: /images/celtic-room-freak-group-outside-2-720w.webp
+---
+
+<style>
+	.hero {
+		background-image: {% include overlay-filter.html %}, url({% include relative-src.html src=page.mob_image %});
+	}
+	@media (min-width: 768px) {
+		.hero {
+			background-image: {% include overlay-filter.html %}, url({% include relative-src.html src=page.image %});
+		}	
+	}
+</style>
+
+<section class="hero">
+	<div class="inner-hero text-container">
+		<div class="hero-text-container">
+			<h1 class="editable">Our Story</h1>
+			<p class="subtext editable">We have an extremely talented group of musicians whose sole purpose is to inspire you with music.</p>
+		</div>
+	</div>
+</section>
+
+<section class="pad">
+	<div class="container">
+		<p class="editor-link"><a href="cloudcannon:collections/_staff_members" class="btn"><strong>&#9998;</strong> Manage Staff Members</a></p>
+		<ul class="staff">
+			{% for person in site.staff_members %}
+				<li>
+					<div class="square-image" style="background-image: url({% include relative-src.html src=person.image_path %})"></div>
+					<div class="name"><a target="_blank" href="https://twitter.com/{{ person.twitter_username }}">{{ person.name }}</a></div>
+					<div class="position">{{ person.position }}</div>
+				</li>
+			{% endfor %}
+		</ul>
+	</div>
+</section>

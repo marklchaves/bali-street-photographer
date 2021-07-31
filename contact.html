@@ -1,0 +1,50 @@
+---
+title: Contact
+description: Find out where we're playing and join us!
+map:
+  telephone: +62 (0)361 281 814
+  address: "The Wicked Parrot Restaurant, Jalan Tamblingan, Sanur, Bali, Indonesia"
+  link: The+Wicked+Parrot/@-8.6909128,115.2617616,17z/data=!3m1!4b1!4m5!3m4!1s0x2dd241cbc78edfa3:0x6d8c0f45a1233c3e!8m2!3d-8.6909124!4d115.2639449
+image: /images/celticroom-meja-violin-2000w.webp
+---
+
+<section class="hero" style="background-image: {% include overlay-filter.html %}, url({% include relative-src.html src=page.image %})">
+	<div class="inner-hero text-container">
+		<div class="hero-text-container">
+			<h1 class="editable">Reach out</h1>
+			<h2 class="editable">to us</h2>
+			<p class="subtext editable">Find out where we're playing, what music we play, and how to join us!</p>
+		</div>
+		<div class="hero-text-container">
+			<form action="{{ site.baseurl }}/contact-success/" method="post" class="contact-form">
+				<input type="hidden" name="_to" value="support@cloudcannon.com">
+				<input type="text" name="_gotcha" style="display: none;">
+	
+				<label for="name">Name</label>
+				<input type="text" name="name" id="name" placeholder="Name">
+	
+				<label for="email">Email Address</label>
+				<input type="email" name="email" id="email" placeholder="Email" required>
+	
+				<label for="message">Message</label>
+				<textarea name="message" id="message" placeholder="Tell us something good."></textarea>
+	
+				<input type="submit" value="Send Message">
+			</form>	
+		</div>
+	</div>
+</section>
+
+<section class="pad">
+	<div class="text-container contact-box">
+		<div class="contact-details">
+			<h3>Telephone</h3>
+			<address><a href="tel:{{ page.map.telephone | url_encode }}">{{ page.map.telephone }}</a></address>
+			<h3>Address</h3>
+			<address><a target="_blank" href="https://www.google.com/maps/place/{{ page.map.link }}">{{ page.map.address | replace: ", ", "<br>" }}</a></address>
+
+			<h3>Email</h3>
+			<p class="editable"><a href="mailto:mark@caughtmyeye.cc">mark@caughtmyeye.cc</a></p>
+		</div>
+	</div>
+</section>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		{% seo %}
+		{% feed_meta %}
+
+        <!-- Icons -->
+        <meta name="msapplication-config" content="/browserconfig.xml">
+        <link rel="manifest" href="/site.webmanifest" />
+        
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="black">
+        
+        <!-- Note: No need to include favicon.ico if placed in root dir. -->
+        <link rel="icon" href="{{ site.baseurl }}/favicon-16x16.png" sizes="16x16" />
+        <link rel="icon" href="{{ site.baseurl }}/favicon-32x32.png" sizes="32x32" />
+        <link rel="icon" href="{{ site.baseurl }}/icon-48x48.png" sizes="48x48" />
+        <link rel="icon" href="{{ site.baseurl }}/icon-72x72.png" sizes="72x72" />
+        <link rel="icon" href="{{ site.baseurl }}/icon-96x96.png" sizes="96x96" />
+        <link rel="icon" href="{{ site.baseurl }}/icon-128x128.png" sizes="128x128" />
+        <link rel="icon" href="{{ site.baseurl }}/icon-144x144.png" sizes="144x144" />
+        <link rel="icon" href="{{ site.baseurl }}/icon-152x152.png" sizes="152x152" />
+        <link rel="icon" href="{{ site.baseurl }}/icon-192x192.png" sizes="192x192" />
+        <link rel="icon" href="{{ site.baseurl }}/icon-384x384.png" sizes="384x384" />
+        <link rel="icon" href="{{ site.baseurl }}/icon-512x512.png" sizes="512x512" />
+        
+        <link rel="apple-touch-icon" sizes="72x72" href="{{ site.baseurl }}/icon-72x72.png" />
+        <link rel="apple-touch-icon" sizes="128x128" href="{{ site.baseurl }}/icon-128x128.png" />
+        <link rel="apple-touch-icon" sizes="144x144" href="{{ site.baseurl }}/icon-144x144.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="{{ site.baseurl }}/apple-touch-icon.png" />
+
+		<link rel="stylesheet" href="{{ site.baseurl }}/css/screen.css" />
+		
+		{% if page.swiper %}
+			<link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper-bundle.min.css" />
+		{%endif %}
+
+		{% if jekyll.environment == 'production' and site.google_analytics_key != '' %}
+			<!-- TO DO: Fix and replace with gtag. ~mlc -->
+			<script>
+				window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+				ga('create', '{{ site.google_analytics_key }}', 'auto');
+				ga('send', 'pageview');
+			</script>
+			<script async src='https://www.google-analytics.com/analytics.js'></script>
+		{% endif %}
+	</head>
+
+	<body>
+		<header id="mainHeader" style="display: flex; justify-content: space-between; align-items: center;">
+			<div class="container">
+				<div class="company-name"></div>
+					<a href="{{ site.baseurl }}/">
+						<span class="dark-logo"><img width="100" height="84" src="{{ site.baseurl }}/images/logo/squarespace-cmedev-logo-black-200x167.png" alt="dark cme dev logo"></span>
+						<span class="light-logo"><img width="100" height="84" src="{{ site.baseurl }}/images/logo/squarespace-cmedev-logo-white-200x167.png" alt="light cme dev logo"></span>
+					</a>
+				</div>
+				{% include navigation.html %}
+				<p class="editor-link"><a style="display:inline;" href="cloudcannon:collections/_data/navigation.yml" class="btn"><strong>&#9998;</strong> Edit navigation</a></p>
+			</div>
+		</header>
+
+		{{ content }}
+
+		<footer>
+			<div class="container">
+				<p class="editor-link"><a href="cloudcannon:collections/_data/footer.yml" class="btn"><strong>&#9998;</strong> Edit footer</a></p>
+				<ul class="footer-left-links">
+					{% for link in site.data.footer.left_links %}
+						<li>
+							<a {% if link.new_window %}target="_blank"{% endif %} href="{% include relative-src.html src=link.link %}" {% if link.social_icon %}class="{{ link.social_icon | slugify }}-icon"{% endif %}>
+								{% if link.social_icon %}{% include social-icon.html icon=link.social_icon %}{% endif %}
+								{{ link.name }}
+							</a>
+						</li>
+					{% endfor %}
+				</ul>
+				<ul class="footer-right-links">
+					{% for link in site.data.footer.right_links %}
+						<li>
+							<a {% if link.new_window %}target="_blank"{% endif %} href="{% include relative-src.html src=link.link %}" {% if link.social_icon %}class="{{ link.social_icon | slugify }}-icon"{% endif %}>
+								{% if link.social_icon %}{% include social-icon.html icon=link.social_icon %}{% endif %}
+								{{ link.name }}
+							</a>
+						</li>
+					{% endfor %}
+				</ul>
+				<p class="copyright">
+					<a href="https://www.caughtmyeye.cc/">
+						&copy;&nbsp;
+						<span id="copyright">
+							<script>document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))
+							</script>
+						</span>&nbsp;caught my eye
+					</a>
+				</p>
+			</div>
+		</footer>
+
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+		<script src="{{ site.baseurl }}/js/main.js"></script>
+		
+		{% if page.swiper %}
+		    <script src="https://unpkg.com/swiper/js/swiper-bundle.min.js"></script>
+		    <script>
+                var mySwiper = new Swiper ('.swiper-container', {
+                    // Optional parameters
+                    direction: 'horizontal',
+                    loop: true,
+				
+    				// Navigation arrows
+    				navigation: {
+						nextEl: '.swiper-button-next',
+						prevEl: '.swiper-button-prev',
+					},
+                });
+            </script>
+		{%endif %}
+	</body>
+</html>

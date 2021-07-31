@@ -1,0 +1,88 @@
+---
+title: Bali Street Photographer - Coming Soon
+description: The new home of balistreetphotographer.com. Powered by The Celtic Room template by caught my eye.
+image: /images/celticroom-ady-violin-1-ed-2000w.webp
+mob_image: /images/celticroom-ady-violin-1-ed-720w.webp
+bottom_image: https://source.unsplash.com/user/marklchaves/2000x1322
+---
+
+<style>
+.hero {
+	background-image: {% include overlay-filter.html %}, url({% include relative-src.html src=page.mob_image %});
+}
+@media (min-width: 768px) {
+	.hero {
+		background-image: {% include overlay-filter.html %}, url({% include relative-src.html src=page.image %});
+	}	
+}
+</style>
+
+<section class="hero">
+	<div class="inner-hero text-container text-container--right">
+		<div class="hero-text-container hero-text-container--right">
+			<h1 class="editable">Bali Steet Photographer</h1>
+			<p class="subtext editable">The new home of balistreetphotographer.com powered by The Celtic Room template by caught my eye.</p>
+			<div class="cta button alt">
+				<a href="#">Coming Soon!</a>
+			</div>
+		</div>
+	</div>
+	<div class="learn-more"><a href="#learn-more">Sneak peek at the template<span class="arrow">&#x25BC;</span></a></div>
+</section>
+
+<div class="content">
+	<section class="info" id="learn-more">
+		<div class="container flex">
+			<div id="home-text-1" class="text">
+				<h2 class="editable">Traditional Irish Music</h2>
+				<p class="editable">The Celtic Room is for anyone who loves to play traditional Irish Music. Find out how to contact Irish musicians across Indonesia. Learn where you can go to play traditional Irish music.</p>
+				<div class="cta button alt2">
+					<a href="#">Learn more</a>
+				</div>
+			</div>
+			<div class="image image--resp-portrait">
+				<img id="home-image-1" class="editable" src="/images/celticroom-etha-tuning-1-650w.webp" alt="Etha of the Celtic Room tuning her violin" />
+			</div>
+		</div>
+	</section>
+
+	<section id="home-section-2" class="info">
+		<div class="container flex">
+			<div id="home-text-2" class="text">
+				<h2 class="editable">Play Music With Us</h2>
+				<p class="editable">Join Us at Our weekly Session&mdash;Tuesday 4pm at the Wicked Parrot, Sanur. We'll share a list of tunes commonly played in Indonesia, so you can come and play with us.</p>
+				<div class="cta button alt2">
+					<a href="#">Join us</a>
+				</div>
+			</div>
+			<div class="image image--resp-portrait">
+				<img id="home-image-2" class="editable" src="/images/celticroom-etha-violin-cello-1-650w.webp" alt="The Celtic Room violinist and cellist" />
+			</div>
+		</div>
+	</section>
+
+	<section id="home-section-3" class="info">
+		<div class="container flex">
+			<div id="home-text-3" class="text">
+				<h2 class="editable">Learn How to Play</h2>
+				<p class="editable">Are you a new musician? Why not learn how to play with us. You'll learn abc text music notation, and you'll get sound clips for our tunes to help you learn to play them.</p>
+				<div class="cta button alt2">
+					<a href="#">Learn more</a>
+				</div>
+			</div>
+			<div class="image image--resp-portrai">
+				<img id="home-image-3" class="editable" src="/images/celticroom-stella-accordian-1-650w.webp" alt="Screenshot" />
+			</div>
+		</div>
+	</section>
+
+	<section class="hero" style="background-image: url({% include relative-src.html src=page.bottom_image %})">
+		<div class="inner-hero text-container">
+			<div class="hero-text-container hero__text--bg">
+				<h2 class="editable">Find out where we're playing</h2>
+				<p class="subtext editable">Have fun listening, dancing, and meeting new people. Come out and join us.</p>
+				<div class="cta button alt"><a href="#">Where are we playing?</a></div>
+			</div>
+		</div>
+	</section>
+</div>
