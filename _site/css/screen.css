@@ -129,7 +129,8 @@ p, address, ul {
   .hero:before {
     height: 300px;
     /* Grow gradient on DT. */ } }
-.container, .text-container {
+.container,
+.text-container {
   margin: 0 auto;
   position: relative;
   padding: 0 20px; }
@@ -280,11 +281,11 @@ blockquote:before {
   .learn-more a {
     text-decoration: none;
     color: #fff;
-    opacity: .9; }
+    opacity: 0.9; }
     .learn-more a:hover {
       opacity: 1; }
   .learn-more .arrow {
-    font-size: .6em; }
+    font-size: 0.6em; }
 
 .editor-link {
   display: none;
@@ -312,17 +313,6 @@ blockquote:before {
 .cms-editor-active .editor-link {
   display: block; }
 
-/* Custom Stuff */
-.swiper-container, .swiper-container img {
-  width: 325px; }
-
-@media screen and (min-width: 768px) {
-  .swiper-container {
-    width: 600px;
-    height: 720px; }
-
-  .swiper-container img {
-    width: 600px; } }
 .staff {
   padding: 0;
   margin: 0;
@@ -577,7 +567,7 @@ nav {
       display: inline;
       position: absolute;
       right: 10px;
-      top: -7px;
+      /* top: -7px; remove for now */
       font-size: 1.9em;
       border: 0;
       text-shadow: 0;
@@ -721,3 +711,85 @@ footer {
     margin-bottom: calc(1 * var(--neg-margin));
     margin-right: var(--neg-margin);
     z-index: 10; } }
+/* Custom Stuff */
+.swiper-container,
+.swiper-container img {
+  width: 325px; }
+
+/** Modal Styles */
+:root {
+  --main-bg-color: black;
+  --bright-text: #979EA1; }
+
+.modal {
+  /* This way it could be display flex or grid or whatever also. */
+  display: block;
+  /* Probably need media queries here */
+  width: 95%;
+  max-width: 95%;
+  height: 430px;
+  position: fixed;
+  z-index: 9999;
+  left: 50%;
+  top: 50%;
+  /* Use this for centering if unknown width/height */
+  transform: translate(-50%, -50%);
+  /* 
+	 * If known, negative margins are probably better 
+	 * (less chance of blurry text).
+	 *
+	 * margin: -200px 0 0 -200px; 
+	 */
+  background: var(--main-bg-color);
+  color: var(--bright-text);
+  box-shadow: 0 0 60px 10px rgba(0, 0, 0, 0.9); }
+  .modal .close-button {
+    border: 2px solid var(--bright-text);
+    background: var(--main-bg-color);
+    color: var(--bright-text);
+    padding: 5px 10px;
+    font-size: 1.3rem; }
+    .modal .close-button:hover {
+      cursor: pointer; }
+
+.closed {
+  display: none; }
+
+.modal-overlay {
+  width: 100vw;
+  height: 100%;
+  z-index: 50;
+  background: rgba(0, 0, 0, 0.6); }
+
+.modal-guts {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  padding: 2%; }
+  .modal-guts h1,
+  .modal-guts p {
+    color: var(--bright-text); }
+
+/** Media Queries */
+@media (min-width: 600px) {
+  .modal {
+    width: 85%;
+    height: 335px; } }
+@media (min-width: 768px) {
+  .modal {
+    width: 75%;
+    height: 335px; } }
+@media (min-width: 1024px) {
+  .modal {
+    width: 50%;
+    height: 300px; } }
+@media (min-width: 768px) {
+  .swiper-container {
+    width: 600px;
+    height: 720px; }
+
+  .swiper-container img {
+    width: 600px; } }
