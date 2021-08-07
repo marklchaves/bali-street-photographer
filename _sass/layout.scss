@@ -8,6 +8,14 @@
 	max-width: 750px;
 }
 
+.text-container--left {
+	justify-content: flex-start;
+}
+
+.hero-text-container--left {
+	text-align: left !important;
+}
+
 .text-container--right {
 	justify-content: flex-end;
 }
