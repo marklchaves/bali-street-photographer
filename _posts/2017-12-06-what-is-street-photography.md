@@ -62,13 +62,19 @@ To explore rather than visit.
 
 To connect rather than separate.
 
-The only thing missing is to practice the above with a camera in hand. Sure, we can go at length talking abut technique: taking stridebys, layering compositions, being candid, approaching strangers, and random street portraits. I feel that these concepts fall into place more naturally when capturing HCB‘s (Henri Cartier-Bresson) decisive moment is cultivated intrinsically. I.e., intuitively feeling when to click–which is the opposite of following a sign that says, “Take your photograph here.”
+The only thing missing is to practise the above with a camera in hand. Sure, we can go at length talking abut technique: taking stridebys, layering compositions, being candid, approaching strangers, and random street portraits. 
+
+I think that street photography concepts fall into place naturally when practising HCB‘s (Henri Cartier-Bresson) decisive moment. I.e., It's better to intuitively feel when to click&nbsp;which is the opposite of following a sign that says, “Take your photograph here.”
 
 ## The “Rules” of Street Photography
 
 Pop-quiz! According to my philosophy, does a candid photo of someone at the beach with no street in sight count as street photography? Yes! Ironically it does. Clear as mud?
 
-Okay, if you need some (shall we say) structure, [Lomography’s 10 Golden Rules](https://www.lomography.com/about/the-ten-golden-rules) is the best collection of street photography guidelines I’ve seen compiled in one place. Pay extra careful attention to rule #10.
+![A street portrait of a food vendor in the fading light at Sanur Beach, Bali](/images/bali-sanur-bapak-penjual-pantai-ed-re-1280w.webp "A street portrait of a food vendor in the fading light at Sanur Beach, Bali")
+
+**Above**: A street portrait of a food vendor in the fading light at Sanur Beach, Bali.
+
+OK, if you need some (shall we say) structure, [Lomography’s 10 Golden Rules](https://www.lomography.com/about/the-ten-golden-rules) is the best collection of street photography guidelines I’ve seen compiled in one place. Pay extra careful attention to rule #10.
 
 ![What one sees at a Balinese wedding](https://balistreetphotographer.files.wordpress.com/2017/12/bali_payangan_wedding_bride_1_ed.jpg?w=580&h=875 "What one sees at a Balinese wedding")
 

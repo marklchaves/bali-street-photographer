@@ -4,7 +4,6 @@ const modal = document.querySelector("#modal");
 const modalOverlay = document.querySelector("#modal-overlay");
 const closeButton = document.querySelector("#close-button");
 
-// To do: allow to close when clicked outside modal.
 function closePopup() {
   modal.classList.toggle("closed");
   modalOverlay.classList.toggle("closed");
@@ -34,7 +33,7 @@ function handleClose(event) {
   ) {
     closePopup();
     document.removeEventListener("click", handleClose, false);
-}
+  }
 }
 
 window.addEventListener("scroll", () => {
