@@ -1,7 +1,7 @@
 ---
 title: What is Street Photography?
 date: 2017-12-06
-description: For me, street photography resembles more of a philosophy than a technique. I've tried to express the philosophy in the mission statement for Bali Street Photographer.
+description: For me, street photography resembles more of a philosophy than a technique.
 categories:
   - photography
   - theory
