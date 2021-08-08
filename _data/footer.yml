@@ -7,20 +7,12 @@ left_links:
     link: /contact/
 right_links:
   - name:
-    link: https://www.facebook.com/CelticRoom/
-    new_window: true
-    social_icon: Facebook
-  - name:
-    link: https://twitter.com/marklchaves
+    link: https://twitter.com/balistreetphoto
     social_icon: Twitter
     new_window: true
   - name:
-    link: https://youtube.com/
-    social_icon: YouTube
-    new_window: true
-  - name:
-    link: https://www.instagram.com/celticroom_bali/
-    social_icon: Instagram
+    link: https://www.pinterest.com/marklchaves/bali-street-photographer/
+    social_icon: Pinterest
     new_window: true
   - name:
     link: /feed.xml
