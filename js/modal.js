@@ -1,8 +1,8 @@
 /** Popup Modal */
 
-let modal = document.querySelector("#modal");
-let modalOverlay = document.querySelector("#modal-overlay");
-let closeButton = document.querySelector("#close-button");
+const modal = document.querySelector("#modal");
+const modalOverlay = document.querySelector("#modal-overlay");
+const closeButton = document.querySelector("#close-button");
 
 // To do: allow to close when clicked outside modal.
 function closePopup() {
@@ -27,9 +27,15 @@ function displayPopup() {
   body.style.top = `-${scrollY}`;
 }
 
-closeButton.addEventListener("click", () => {
-  closePopup();
-});
+function handleClose(event) {
+  if (
+    event.target.matches("#close-button") ||
+    !event.target.closest("#modal")
+  ) {
+    closePopup();
+    document.removeEventListener("click", handleClose, false);
+}
+}
 
 window.addEventListener("scroll", () => {
   document.documentElement.style.setProperty(
@@ -38,6 +44,18 @@ window.addEventListener("scroll", () => {
   );
 });
 
-setTimeout(function () {
-  displayPopup();
-}, 3000);
+(function () {
+  if (
+    !document.cookie
+      .split("; ")
+      .find((row) => row.startsWith("bsp-coming-soon"))
+  ) {
+    document.cookie = "bsp-coming-soon=true; Secure";
+    /* Close when close button clicked or clicked outside modal. */
+    document.addEventListener("click", handleClose, false);
+    /* Display the popup modal after a delay. */
+    setTimeout(function () {
+      displayPopup();
+    }, 3000);
+  }
+})();
