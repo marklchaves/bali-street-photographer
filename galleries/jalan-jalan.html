@@ -1,0 +1,176 @@
+---
+title: Jalan Jalan Gallery
+layout: page
+image: /images/bali-ubud-pasar-les-1-2-2048w.webp
+mob_image: /images/bali-ubud-pasar-les-1-2-720w.webp
+bottom_image: https://source.unsplash.com/user/marklchaves/2000x1322
+---
+
+<style>
+	.gallery {
+		background-color: black;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		padding: 1em 0;
+	}
+
+	.gallery__heading {
+		color: white;
+	}
+
+	#viewer {
+		height: 512px;
+		padding: 1em 0;
+	}
+
+	#teasers > img {
+    	width: 55px;
+	}
+
+	#teasers > img:hover {
+		cursor: pointer;
+	}
+
+	.hidden1 {
+  		display: none !important;
+	}
+
+	/** Media Queries */
+	@media (min-width: 1024px) {
+		.gallery,
+		#viewer {
+			padding: 2em 0;
+		}
+		#teasers > img {
+    		width: 150px;
+		}
+	}
+</style>
+
+<div class="gallery">
+	<div class="gallery__heading">
+		<p>Jalan jalan is Bahasa Indonesia for walkabout.</p>
+	</div>
+	<div id="viewer">
+	</div>
+	<div id="teasers">
+	</div>
+</div>
+
+<script>
+	/**
+	 * Array of picture objects grouped by albumId.
+	 */
+	const myPicturesArray = [
+		{
+			albumId: 1,
+			id: 1,
+			title: "portrait of emily on 35mm film by mark l chaves",
+			url: "https://marklchaves.files.wordpress.com/2020/01/arizona-phoenix-art-emily-512w.jpg",
+			thumbnailUrl: "https://marklchaves.files.wordpress.com/2020/01/arizona-phoenix-art-emily-150w.jpg" // To do: Create 150x150 thumb of Emily. "http://placehold.it/150/92c952"
+		},
+		{
+			albumId: 1,
+			id: 2,
+			title: "tara, my love",
+			url: "https://marklchaves.files.wordpress.com/2020/01/bali-sanggingan-rina-scuba-fin-1-720w_ggitek_c_scalew_512.jpg",
+			thumbnailUrl: "https://marklchaves.files.wordpress.com/2020/01/bali-sanggingan-rina-scuba-fin-1-720w_ggitek_c_scalew_150.jpg"
+		},
+		{
+			albumId: 2,
+			id: 51,
+			title: "early morning light at the pasar by mark l chaves",
+			url: "https://marklchaves.files.wordpress.com/2020/01/bali-pasar-ubud-ibu-duduk-sinar-512w.jpg",
+			thumbnailUrl: "https://marklchaves.files.wordpress.com/2020/01/bali-pasar-ubud-ibu-duduk-sinar-150w.jpg"
+		},
+		{
+			albumId: 2,
+			id: 52,
+			title: "self portrait - paro bhutan 2014",
+			url:
+				"https://marklchaves.files.wordpress.com/2020/01/bhutan-paro-mark-self-portrait-down-bw-512w.jpg",
+			thumbnailUrl: "https://marklchaves.files.wordpress.com/2020/01/bhutan-paro-mark-self-portrait-down-bw-150w.jpg"
+		},
+		{
+			albumId: 3,
+			id: 127,
+			title: "Our Millie",
+			url: "https://marklchaves.files.wordpress.com/2020/01/payogan-rumah-anjing-millie_2_-_sq_gafnar_ar_1_1c_fillg_auto__c_scalew_512.jpg",
+			thumbnailUrl: "https://marklchaves.files.wordpress.com/2020/01/payogan-rumah-anjing-millie_2_-_sq_gafnar_ar_1_1c_fillg_auto__c_scalew_150.jpg"
+		},
+		{
+			albumId: 3,
+			id: 128,
+			title: "Rocco!",
+			url: "https://marklchaves.files.wordpress.com/2020/01/2-bali-campuhan-ridge-rocco-720w_iebenr_c_scalew_512.jpg",
+			thumbnailUrl: "https://marklchaves.files.wordpress.com/2020/01/2-bali-campuhan-ridge-rocco-720w_iebenr_c_scalew_150.jpg"
+		}
+	];
+
+	/**
+	 * On Page Load Display the Thumbs
+	 */
+	myPicturesArray.forEach(function (currentImage) {
+		let image = document.createElement("img");
+		image.id = currentImage.id;
+		image.src = currentImage.thumbnailUrl;
+		image.alt = currentImage.title;
+		image.title = currentImage.title;
+		image.setAttribute("tabindex", "0");
+		image.onclick = function () {
+			displayImage(image.id);
+		};
+		document.querySelector("#teasers").append(image);
+	});
+
+	/** Display the first image. */
+	displayImage(1);
+
+	/** 
+	 * Find the Picture
+	 */
+	function findPicture2(id) {
+		return myPicturesArray.find(pic => pic.id === id);
+	}
+
+	/**
+	 * Display Selected Image in Viewer
+	 */
+	function displayImage(imageId) {
+		let picture = findPicture2(parseInt(imageId));
+		let image = document.createElement("img");
+		image.src = picture.url;
+		image.alt = picture.title;
+		document.querySelector("#viewer").innerHTML = "";
+		document.querySelector("#viewer").append(image);
+	}
+</script>
+<script>
+	/** Intersection Observer */
+	const section = document.querySelector(".gallery");
+	const header = document.querySelector("header");
+
+	const objOptions = {
+		root: null,
+		threshold: 0.5,
+		rootMargin: "0px",
+	};
+
+	const sectionObserver = new IntersectionObserver(callBackFunction, objOptions);
+	sectionObserver.observe(section);
+
+	// Do the collide only once.
+	function callBackFunction(entries) {
+		const [entry] = entries;
+		console.log(entry);
+		if (entry.isIntersecting) {
+			header.classList.add("hidden1");
+			//sectionObserver.unobserve(section);
+		} else {
+			header.classList.remove("hidden1");
+		}
+	}
+
+</script>
