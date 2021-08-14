@@ -27,7 +27,8 @@ bottom_image: https://source.unsplash.com/user/marklchaves/2000x1322
 	}
 
 	#viewer {
-		height: 512px;
+		max-height: 512px;
+		min-height: 375px;
 		padding: 1em 0;
 	}
 
@@ -35,8 +36,22 @@ bottom_image: https://source.unsplash.com/user/marklchaves/2000x1322
     	width: 55px;
 	}
 
+	#teasers > img:not(:last-child) {
+		margin-right: 0.2em;
+	}
+
 	#teasers > img:hover {
 		cursor: pointer;
+	}
+
+	#teasers > img:focus {
+		outline: 1px solid cyan;
+	}
+
+	/** Enlarge on Hover */
+	#teasers > img:hover {
+  		transform: perspective(25rem) scale(1.2);
+  		transition: all 0.1s ease-in-out;
 	}
 
 	.hidden1 {
