@@ -42,16 +42,12 @@
 
 #teasers > img:hover {
   cursor: pointer;
+  transform: perspective(25rem) scale(1.2); /** Zoom on Hover */
+  transition: all 0.2s ease-in-out;
 }
 
 #teasers > img:focus {
   outline: 1px solid var(--accent-color);
-}
-
-/** Enlarge on Hover */
-#teasers > img:hover {
-  transform: perspective(25rem) scale(1.2);
-  transition: all 0.2s ease-in-out;
 }
 
 .hidden1 {
