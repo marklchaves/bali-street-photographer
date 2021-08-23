@@ -55,7 +55,7 @@
 }
 
 /** Media Queries */
-@media (min-width: 1024px) {
+@media #{$x-large} {
   .gallery,
   #viewer {
     padding: 2em 0;
@@ -139,33 +139,30 @@
 
 /** Media Queries */
 
-@media (min-width: 600px) {
+@media #{$mid-point} {
   .modal {
     width: 85%;
     height: 335px;
   }
 }
 
-@media (min-width: 768px) {
+@media #{$desktop} {
   .modal {
     width: 75%;
     height: 335px;
   }
-}
-
-@media (min-width: 1024px) {
-  .modal {
-    width: 50%;
-    height: 300px;
-  }
-}
-
-@media (min-width: 768px) {
   .swiper-container {
     width: 600px;
     height: 720px;
   }
   .swiper-container img {
     width: 600px;
+  }
+}
+
+@media #{$x-large} {
+  .modal {
+    width: 50%;
+    height: 300px;
   }
 }
