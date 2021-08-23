@@ -27,9 +27,11 @@
 }
 
 #viewer {
+  display: grid;
   max-height: 512px;
   min-height: 375px;
   padding: 1em 0;
+  place-items: center;
 }
 
 #teasers > img {
