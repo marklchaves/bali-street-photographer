@@ -44,6 +44,27 @@ bottom_image: https://source.unsplash.com/user/marklchaves/2000x1322
 			url: "/images/jalan-jalan/bali-ubud-pasar-ibu-duduk-sinar-film-768w.webp",
 			thumbnailUrl: "/images/jalan-jalan/bali-ubud-pasar-ibu-duduk-sinar-film-512w.webp"
 		},
+		{
+			albumId: 1,
+			id: 4,
+			title: "A day in the life at Pasar Ubud.",
+			url: "/images/jalan-jalan/bali-ubud-pasar-cewek-di-bawah-768w.webp",
+			thumbnailUrl: "/images/jalan-jalan/bali-ubud-pasar-cewek-di-bawah-512w.webp"
+		},
+		{
+			albumId: 1,
+			id: 5,
+			title: "The morning queue for breakfast bungkus (to go).",
+			url: "/images/jalan-jalan/bali-ubud-pasar-orang2-toko-antre-makanan-768w.webp",
+			thumbnailUrl: "/images/jalan-jalan/bali-ubud-pasar-orang2-toko-antre-makanan-512w.webp"
+		},
+		{
+			albumId: 1,
+			id: 6,
+			title: "Vendors in the early morning light on 35mm film in black and white.",
+			url: "/images/jalan-jalan/1-bali-ubud-pasar-ibu-sinar-bw-768w.webp",
+			thumbnailUrl: "/images/jalan-jalan/1-bali-ubud-pasar-ibu-sinar-bw-512w.webp"
+		},
 	];
 
 	/**
@@ -80,6 +101,7 @@ bottom_image: https://source.unsplash.com/user/marklchaves/2000x1322
 		let image = document.createElement("img");
 		image.src = picture.url;
 		image.alt = picture.title;
+		image.title = picture.title;
 		document.querySelector("#viewer").innerHTML = "";
 		document.querySelector("#viewer").append(image);
 	}

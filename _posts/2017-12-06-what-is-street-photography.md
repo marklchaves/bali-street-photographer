@@ -70,7 +70,7 @@ I think that street photography concepts fall into place naturally when practisi
 
 Pop-quiz! According to my philosophy, does a candid photo of someone at the beach with no street in sight count as street photography? Yes! Ironically it does. Clear as mud?
 
-![A street portrait of a food vendor in the fading light at Sanur Beach, Bali](/images/bali-sanur-bapak-penjual-pantai-ed-re-1280w.webp "A street portrait of a food vendor in the fading light at Sanur Beach, Bali")
+![A street portrait of a food vendor in the fading light at Sanur Beach, Bali](/images/blog/bali-sanur-bapak-penjual-pantai-ed-re-1280w.webp "A street portrait of a food vendor in the fading light at Sanur Beach, Bali")
 
 **Above**: A street portrait of a food vendor in the fading light at Sanur Beach, Bali.
 
