@@ -1,0 +1,18 @@
+<script>
+    const images = [
+        'bali-ubud-pasar-les-1-2-2048w.webp',
+        'celticroom-waxing-cello-1-2-2000w.webp',
+        'celtic-room-freak-group-outside-2-2000w.webp'
+    ];
+
+    let randIdx = Math.floor(Math.random() * images.length);
+
+    console.log(randIdx);
+
+    jQuery(document).ready(function ($) {
+        $('#pre-footer')
+            .css({
+                'background-image': 'url(images/' + images[randIdx] + ')'
+            });
+    }); // jQuery
+</script>

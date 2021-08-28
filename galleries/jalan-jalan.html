@@ -1,6 +1,6 @@
 ---
 title: Jalan Jalan Gallery
-layout: page
+layout: gallery
 image: /images/jalan-jalan/bali-ubud-bapak-strideby-pasar-2000w.webp
 mob_image: /images/jalan-jalan/bali-ubud-bapak-strideby-pasar-720w.webp
 bottom_image: https://source.unsplash.com/user/marklchaves/2000x1322
@@ -66,70 +66,4 @@ bottom_image: https://source.unsplash.com/user/marklchaves/2000x1322
 			thumbnailUrl: "/images/jalan-jalan/1-bali-ubud-pasar-ibu-sinar-bw-512w.webp"
 		},
 	];
-
-	/**
-	 * On Page Load Display the Thumbs
-	 */
-	myPicturesArray.forEach(function (currentImage) {
-		let image = document.createElement("img");
-		image.id = currentImage.id;
-		image.src = currentImage.thumbnailUrl;
-		image.alt = currentImage.title;
-		image.title = currentImage.title;
-		image.setAttribute("tabindex", "0");
-		image.onclick = function () {
-			displayImage(image.id);
-		};
-		document.querySelector("#teasers").append(image);
-	});
-
-	/** Display the first image. */
-	displayImage(1);
-
-	/** 
-	 * Find the Picture
-	 */
-	function findPicture2(id) {
-		return myPicturesArray.find(pic => pic.id === id);
-	}
-
-	/**
-	 * Display Selected Image in Viewer
-	 */
-	function displayImage(imageId) {
-		let picture = findPicture2(parseInt(imageId));
-		let image = document.createElement("img");
-		image.src = picture.url;
-		image.alt = picture.title;
-		image.title = picture.title;
-		document.querySelector("#viewer").innerHTML = "";
-		document.querySelector("#viewer").append(image);
-	}
-</script>
-<script>
-	/** Intersection Observer */
-	const section = document.querySelector(".gallery");
-	const header = document.querySelector("header");
-
-	const objOptions = {
-		root: null,
-		threshold: 0.5,
-		rootMargin: "0px",
-	};
-
-	const sectionObserver = new IntersectionObserver(callBackFunction, objOptions);
-	sectionObserver.observe(section);
-
-	// Do the collide only once.
-	function callBackFunction(entries) {
-		const [entry] = entries;
-		console.log(entry);
-		if (entry.isIntersecting) {
-			header.classList.add("hidden1");
-			//sectionObserver.unobserve(section);
-		} else {
-			header.classList.remove("hidden1");
-		}
-	}
-
 </script>

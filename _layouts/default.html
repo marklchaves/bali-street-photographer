@@ -127,5 +127,9 @@
                 });
             </script>
 		{% endif %}
+
+		{% if page.pre_footer %}
+			{% include pre-footer.html %}
+		{% endif %}
 	</body>
 </html>
