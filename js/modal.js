@@ -49,12 +49,16 @@ window.addEventListener("scroll", () => {
       .split("; ")
       .find((row) => row.startsWith("bsp-coming-soon"))
   ) {
-    document.cookie = "bsp-coming-soon=true; Secure";
+    let date = new Date();
+    // Expires after 30 days.
+    date.setTime(date.getTime()+(30*24*60*60*1000));
+    expires = "expires=" + date.toUTCString();
+    document.cookie = "bsp-coming-soon=true; " + expires + "; Secure";
     /* Close when close button clicked or clicked outside modal. */
     document.addEventListener("click", handleClose, false);
     /* Display the popup modal after a delay. */
     setTimeout(function () {
       displayPopup();
-    }, 3000);
+    }, 5000);
   }
 })();
