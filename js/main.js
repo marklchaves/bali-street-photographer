@@ -1,3 +1,23 @@
+function handleMobNavClose(event) {
+  if (event.type === "scroll") {
+    document.body.classList.remove("nav-open");
+  } 
+  if (event.type === "click") {
+    if (!event.target.closest("nav")) {
+      document.body.classList.remove("nav-open");
+      console.log(window.scrollY);
+      // Make sure there's no header bg if at the top.
+      if (window.scrollY === 0) {
+        document.querySelector("header").classList.remove("header-background");
+      }
+    }
+  }
+}
+
+// Close the mobile nav if there's a click outside or a scroll.
+document.addEventListener("click", handleMobNavClose, false);
+document.addEventListener("scroll", handleMobNavClose, false);
+
 (function () {
   var header = document.getElementById("mainHeader");
 
@@ -36,6 +56,9 @@
   $("a[href*=\\#]").on("click", function (event) {
     if (this.pathname === window.location.pathname) {
       event.preventDefault();
+
+      // Fix for undefined error.
+      if (!$(this.hash).offset()) return;
 
       $("html, body").animate(
         {

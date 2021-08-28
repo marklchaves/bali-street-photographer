@@ -52,6 +52,8 @@ nav {
 			border: 0;
 			text-shadow: 0;
 			padding: 0 !important;
+			height: 10px;
+			z-index: 10;
 			@media #{$mid-point} {
 				display: none;
 			}
