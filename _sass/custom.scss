@@ -11,10 +11,15 @@
 
 /** Gallery Styles */
 
-.intro {
+.intro,
+.outro {
   color: var(--light-text);
   margin: 0 auto;
   width: 80%;
+}
+
+.outro {
+  padding-bottom: $md-spacer;
 }
 
 .gallery {
