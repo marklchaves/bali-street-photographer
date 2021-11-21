@@ -81,6 +81,7 @@
 @media #{$x-large} {
   .gallery,
   #viewer {
+    min-height: 512px;
     padding: 2em 0;
   }
   #teasers > img {
