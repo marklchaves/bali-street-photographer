@@ -61,6 +61,14 @@
   outline: 1px solid var(--accent-color);
 }
 
+.grid-container {
+  display: grid;
+  max-height: 100vh;
+  max-width: 100%;
+  padding: 1rem 0;
+  place-items: center;
+}
+
 .hidden1 {
   visibility: hidden !important;
 }
