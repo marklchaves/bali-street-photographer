@@ -131,5 +131,10 @@
 		{% if page.pre_footer %}
 			{% include pre-footer.html %}
 		{% endif %}
+
+		{% if page.lightbox %}
+			<script type="text/javascript" src="/js/lightbox.js"></script>
+			<link rel="stylesheet" href="/css/lightbox.css"> 
+		{% endif %}
 	</body>
 </html>
