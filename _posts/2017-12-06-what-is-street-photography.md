@@ -11,7 +11,7 @@ author_staff_member: mark
 ---
 Sometime in the 1970s, my parents took my brothers and me to **Walt Disney World** in Orlando, Florida. It was my first trip to the land of Mickey. Even though I was a self-conscious teenager and terrified of being seen in public with my parents, I was enamoured and mesmerized by the utopian setting that Disney World is famous for.
 
-[TL;DNR](#tldnr)
+[TL;DR](#tldr)
 
 My father was a keen photographer. So, he always supplied us some kind of point-and-shoot film camera to play with on our family vacations. One of the first things I remember seeing at the _happiest place on earth_ (after the long queue at the entrance) was a sign similar to this.
 
@@ -82,9 +82,9 @@ OK, if you need some (shall we say) structure, [Lomography’s 10 Golden Rules](
 
 Head over to the [Jalan Jalan photo gallery](https://balistreetphotographer.wordpress.com/portfolio/jalan-jalan/) for more street photography examples and inspiration.
 
-<a name="tldnr" id="tldnr">
+<a name="tldr" id="tldr">
 
-## TL;DNR
+## TL;DR
 
 For me street photography is an attempt to capture random acts of candidness. It’s a human condition style of photography that tries to portray people in everyday life situations where everyone might be looking but not really seeing.
 
